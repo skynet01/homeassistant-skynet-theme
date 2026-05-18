@@ -344,21 +344,21 @@ skynet_dark_v2:
   state-icon-unavailable-color: var(--disabled-text-color)
 
   # Sliders
-  paper-slider-knob-color: "#ffc107"
+  paper-slider-knob-color: "#2e3a4f"
   paper-slider-knob-start-color: var(--switch-unchecked-button-color)
   paper-slider-pin-color: var(--paper-slider-knob-color)
-  paper-slider-active-color: "#ffc107"
+  paper-slider-active-color: "#0d4e70"
   paper-slider-secondary-color: "#0d4e70"
   paper-slider-container-color: var(--disabled-text-color)
   mini-media-player-overlay-color: var(--disabled-text-color)
 
   md-slider-inactive-track-color: "#0d4e70"
-  md-slider-active-track-color: "#ffc107"
-  md-slider-handle-color: "#ffc107"
-  md-slider-hover-handle-color: "#ffc107"
-  md-slider-focus-handle-color: "#ffc107"
-  md-slider-pressed-handle-color: "#ffc107"
-  md-slider-label-container-color: "#ffc107"
+  md-slider-active-track-color: "#0d4e70"
+  md-slider-handle-color: "#2e3a4f"
+  md-slider-hover-handle-color: "#344256"
+  md-slider-focus-handle-color: "#344256"
+  md-slider-pressed-handle-color: "#344256"
+  md-slider-label-container-color: "#2e3a4f"
 
   # Text Dividers from text-divier-row card
   text-divider-color: var(--divider-color)
