@@ -14,6 +14,78 @@ skynet_dark_v2:
       font-size: 18px !important;
       font-weight: 800 !important;
     }
+  card-mod-root-yaml: |
+    "ha-data-table $": |
+      .mdc-data-table__header-row {
+        background-color: #161A23 !important;
+      }
+      .mdc-data-table__header-cell,
+      .mdc-data-table__cell.group-header,
+      .group-header {
+        color: #ffc107 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+      }
+    "* $":
+      "ha-data-table $": |
+        .mdc-data-table__header-row {
+          background-color: #161A23 !important;
+        }
+        .mdc-data-table__header-cell,
+        .mdc-data-table__cell.group-header,
+        .group-header {
+          color: #ffc107 !important;
+          font-size: 18px !important;
+          font-weight: 800 !important;
+        }
+  card-mod-config-yaml: |
+    "ha-data-table $": |
+      .mdc-data-table__header-row {
+        background-color: #161A23 !important;
+      }
+      .mdc-data-table__header-cell,
+      .mdc-data-table__cell.group-header,
+      .group-header {
+        color: #ffc107 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+      }
+    "* $":
+      "ha-data-table $": |
+        .mdc-data-table__header-row {
+          background-color: #161A23 !important;
+        }
+        .mdc-data-table__header-cell,
+        .mdc-data-table__cell.group-header,
+        .group-header {
+          color: #ffc107 !important;
+          font-size: 18px !important;
+          font-weight: 800 !important;
+        }
+  card-mod-view-yaml: |
+    "ha-data-table $": |
+      .mdc-data-table__header-row {
+        background-color: #161A23 !important;
+      }
+      .mdc-data-table__header-cell,
+      .mdc-data-table__cell.group-header,
+      .group-header {
+        color: #ffc107 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+      }
+    "* $":
+      "ha-data-table $": |
+        .mdc-data-table__header-row {
+          background-color: #161A23 !important;
+        }
+        .mdc-data-table__header-cell,
+        .mdc-data-table__cell.group-header,
+        .group-header {
+          color: #ffc107 !important;
+          font-size: 18px !important;
+          font-weight: 800 !important;
+        }
 
   # make fan icons rotate based on their speed
   # make fan icons rotate based on their speed
@@ -35,6 +107,30 @@ skynet_dark_v2:
       font-size: 18px !important;
       font-weight: 800 !important;
     }
+  card-mod-card-yaml: |
+    "ha-data-table $": |
+      .mdc-data-table__header-row {
+        background-color: #161A23 !important;
+      }
+      .mdc-data-table__header-cell,
+      .mdc-data-table__cell.group-header,
+      .group-header {
+        color: #ffc107 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+      }
+    "* $":
+      "ha-data-table $": |
+        .mdc-data-table__header-row {
+          background-color: #161A23 !important;
+        }
+        .mdc-data-table__header-cell,
+        .mdc-data-table__cell.group-header,
+        .group-header {
+          color: #ffc107 !important;
+          font-size: 18px !important;
+          font-weight: 800 !important;
+        }
 
   # animations
   card-mod-row-yaml: |
