@@ -7,6 +7,14 @@ skynet_dark_v2:
   #     font-size: 18px;
   #     color: #FFC10A;
   #   }
+  card-mod-view: |
+    .mdc-data-table__cell.group-header,
+    .group-header {
+      color: #ffc107 !important;
+      font-size: 18px !important;
+      font-weight: 800 !important;
+    }
+
   # make fan icons rotate based on their speed
   # make fan icons rotate based on their speed
   card-mod-card: |
@@ -21,9 +29,42 @@ skynet_dark_v2:
     ha-icon[data-domain="fan"][data-state="on"] {
       animation: spin 4s infinite linear;
     }
+    .mdc-data-table__cell.group-header,
+    .group-header {
+      color: #ffc107 !important;
+      font-size: 18px !important;
+      font-weight: 800 !important;
+    }
 
   # animations
   card-mod-row-yaml: |
+    ".": |
+      :host {
+        {# Keep sliders dark at zero/off; switch to amber only for active non-zero device levels. #}
+        {% if config is defined and config.entity is defined %}
+          {% set state = states(config.entity) %}
+          {% set level = states(config.entity)|float(0) %}
+          {% if state_attr(config.entity, 'brightness') is not none %}
+            {% set level = state_attr(config.entity, 'brightness')|float(0) %}
+          {% elif state_attr(config.entity, 'percentage') is not none %}
+            {% set level = state_attr(config.entity, 'percentage')|float(0) %}
+          {% elif state_attr(config.entity, 'current_position') is not none %}
+            {% set level = state_attr(config.entity, 'current_position')|float(0) %}
+          {% elif state_attr(config.entity, 'volume_level') is not none %}
+            {% set level = state_attr(config.entity, 'volume_level')|float(0) %}
+          {% endif %}
+          {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
+          --md-slider-active-track-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
+          --md-slider-handle-color: {{ '#ffc107' if slider_active else '#2e3a4f' }};
+          --md-slider-hover-handle-color: {{ '#ffc107' if slider_active else '#344256' }};
+          --md-slider-focus-handle-color: {{ '#ffc107' if slider_active else '#344256' }};
+          --md-slider-pressed-handle-color: {{ '#ffc107' if slider_active else '#344256' }};
+          --md-slider-label-container-color: {{ '#ffc107' if slider_active else '#2e3a4f' }};
+          --paper-slider-knob-color: {{ '#ffc107' if slider_active else '#2e3a4f' }};
+          --paper-slider-pin-color: {{ '#ffc107' if slider_active else '#2e3a4f' }};
+          --paper-slider-active-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
+        {% endif %}
+      }
     "*:first-child$": |
       @keyframes spin {
         0% {
@@ -303,17 +344,21 @@ skynet_dark_v2:
   state-icon-unavailable-color: var(--disabled-text-color)
 
   # Sliders
-  paper-slider-knob-color: var(--switch-checked-button-color)
+  paper-slider-knob-color: "#ffc107"
   paper-slider-knob-start-color: var(--switch-unchecked-button-color)
   paper-slider-pin-color: var(--paper-slider-knob-color)
-  paper-slider-active-color: "#0D668E"
-  paper-slider-secondary-color: var(--light-primary-color)
+  paper-slider-active-color: "#ffc107"
+  paper-slider-secondary-color: "#0d4e70"
   paper-slider-container-color: var(--disabled-text-color)
   mini-media-player-overlay-color: var(--disabled-text-color)
 
-  md-slider-inactive-track-color: "#181e29"
-  md-slider-active-track-color: "#02a9f4"
-  md-slider-handle-color: "#2e3a4f"
+  md-slider-inactive-track-color: "#0d4e70"
+  md-slider-active-track-color: "#ffc107"
+  md-slider-handle-color: "#ffc107"
+  md-slider-hover-handle-color: "#ffc107"
+  md-slider-focus-handle-color: "#ffc107"
+  md-slider-pressed-handle-color: "#ffc107"
+  md-slider-label-container-color: "#ffc107"
 
   # Text Dividers from text-divier-row card
   text-divider-color: var(--divider-color)
