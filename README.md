@@ -38,3 +38,7 @@ Copy `themes/skynet_dark_v2.yaml` into your Home Assistant `themes/` directory, 
 ## Notes
 
 This theme includes optional `card-mod` styling for fan icon animation. The theme still works without `card-mod`, but those custom animations require it.
+
+## Versioning
+
+Releases use semantic version tags. Commits pushed to `main` run HACS validation, bump the patch version in `VERSION`, and publish a matching GitHub release.

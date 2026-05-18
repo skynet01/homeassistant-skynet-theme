@@ -1,0 +1,66 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-hacs:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: HACS validation
+        uses: "hacs/action@main"
+        with:
+          category: "theme"
+
+  release:
+    needs: validate-hacs
+    runs-on: "ubuntu-latest"
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6.0.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bump patch version
+        id: version
+        shell: bash
+        run: |
+          current="$(tr -d '[:space:]' < VERSION)"
+          current="${current#v}"
+          IFS='.' read -r major minor patch <<< "$current"
+
+          if [[ -z "$major" || -z "$minor" || -z "$patch" ]]; then
+            echo "VERSION must use MAJOR.MINOR.PATCH format; got '$current'" >&2
+            exit 1
+          fi
+
+          next="${major}.${minor}.$((patch + 1))"
+          echo "$next" > VERSION
+          echo "version=$next" >> "$GITHUB_OUTPUT"
+
+      - name: Commit version bump
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add VERSION
+          git commit -m "chore(release): v${{ steps.version.outputs.version }} [skip ci]"
+          git push origin HEAD:main
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          target="$(git rev-parse HEAD)"
+          gh release create "v${{ steps.version.outputs.version }}" \
+            --target "$target" \
+            --title "v${{ steps.version.outputs.version }}" \
+            --notes "Release v${{ steps.version.outputs.version }}."
