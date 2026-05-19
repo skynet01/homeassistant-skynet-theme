@@ -12,11 +12,18 @@ skynet_dark_v2:
     header h2 {
       color: #02a9f4 !important;
     }
+    ha-slider[value="0"]::part(track),
+    ha-slider[value="0"]::part(indicator) {
+      background-color: #0d4e70 !important;
+    }
+    ha-slider[value="0"]::part(thumb) {
+      background-color: #2e3a4f !important;
+    }
     .mdc-data-table__cell.group-header,
     .group-header {
       color: #ffc107 !important;
-      font-size: 18px !important;
-      font-weight: 800 !important;
+      font-size: 14px !important;
+      font-weight: 400 !important;
     }
   card-mod-root-yaml: |
     "ha-data-table $": |
@@ -27,8 +34,8 @@ skynet_dark_v2:
       .mdc-data-table__cell.group-header,
       .group-header {
         color: #ffc107 !important;
-        font-size: 18px !important;
-        font-weight: 800 !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
       }
     "hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
@@ -38,8 +45,8 @@ skynet_dark_v2:
       .mdc-data-table__cell.group-header,
       .group-header {
         color: #ffc107 !important;
-        font-size: 18px !important;
-        font-weight: 800 !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
       }
     "ha-config-entities $ hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
@@ -49,8 +56,27 @@ skynet_dark_v2:
       .mdc-data-table__cell.group-header,
       .group-header {
         color: #ffc107 !important;
-        font-size: 18px !important;
-        font-weight: 800 !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+      }
+    "ha-slider $": |
+      :host {
+        --ha-slider-track-color: #0d4e70;
+        --ha-slider-thumb-color: #2e3a4f;
+        --ha-slider-indicator-color: #0d4e70;
+      }
+      #track {
+        background-color: #0d4e70 !important;
+      }
+      #slider[aria-valuenow="0"] #thumb {
+        background-color: #2e3a4f !important;
+      }
+      #slider[aria-valuenow="0"] #indicator {
+        background-color: #0d4e70 !important;
+      }
+      #slider:not([aria-valuenow="0"]) #thumb,
+      #slider:not([aria-valuenow="0"]) #indicator {
+        background-color: #ffc107 !important;
       }
     "* $":
       "ha-data-table $": |
@@ -61,8 +87,27 @@ skynet_dark_v2:
         .mdc-data-table__cell.group-header,
         .group-header {
           color: #ffc107 !important;
-          font-size: 18px !important;
-          font-weight: 800 !important;
+          font-size: 14px !important;
+          font-weight: 400 !important;
+        }
+      "ha-slider $": |
+        :host {
+          --ha-slider-track-color: #0d4e70;
+          --ha-slider-thumb-color: #2e3a4f;
+          --ha-slider-indicator-color: #0d4e70;
+        }
+        #track {
+          background-color: #0d4e70 !important;
+        }
+        #slider[aria-valuenow="0"] #thumb {
+          background-color: #2e3a4f !important;
+        }
+        #slider[aria-valuenow="0"] #indicator {
+          background-color: #0d4e70 !important;
+        }
+        #slider:not([aria-valuenow="0"]) #thumb,
+        #slider:not([aria-valuenow="0"]) #indicator {
+          background-color: #ffc107 !important;
         }
   card-mod-config-yaml: |
     "ha-data-table $": |
@@ -73,8 +118,8 @@ skynet_dark_v2:
       .mdc-data-table__cell.group-header,
       .group-header {
         color: #ffc107 !important;
-        font-size: 18px !important;
-        font-weight: 800 !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
       }
     "hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
@@ -84,8 +129,8 @@ skynet_dark_v2:
       .mdc-data-table__cell.group-header,
       .group-header {
         color: #ffc107 !important;
-        font-size: 18px !important;
-        font-weight: 800 !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
       }
     "ha-config-entities $ hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
@@ -95,8 +140,27 @@ skynet_dark_v2:
       .mdc-data-table__cell.group-header,
       .group-header {
         color: #ffc107 !important;
-        font-size: 18px !important;
-        font-weight: 800 !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+      }
+    "ha-slider $": |
+      :host {
+        --ha-slider-track-color: #0d4e70;
+        --ha-slider-thumb-color: #2e3a4f;
+        --ha-slider-indicator-color: #0d4e70;
+      }
+      #track {
+        background-color: #0d4e70 !important;
+      }
+      #slider[aria-valuenow="0"] #thumb {
+        background-color: #2e3a4f !important;
+      }
+      #slider[aria-valuenow="0"] #indicator {
+        background-color: #0d4e70 !important;
+      }
+      #slider:not([aria-valuenow="0"]) #thumb,
+      #slider:not([aria-valuenow="0"]) #indicator {
+        background-color: #ffc107 !important;
       }
     "* $":
       "ha-data-table $": |
@@ -107,8 +171,27 @@ skynet_dark_v2:
         .mdc-data-table__cell.group-header,
         .group-header {
           color: #ffc107 !important;
-          font-size: 18px !important;
-          font-weight: 800 !important;
+          font-size: 14px !important;
+          font-weight: 400 !important;
+        }
+      "ha-slider $": |
+        :host {
+          --ha-slider-track-color: #0d4e70;
+          --ha-slider-thumb-color: #2e3a4f;
+          --ha-slider-indicator-color: #0d4e70;
+        }
+        #track {
+          background-color: #0d4e70 !important;
+        }
+        #slider[aria-valuenow="0"] #thumb {
+          background-color: #2e3a4f !important;
+        }
+        #slider[aria-valuenow="0"] #indicator {
+          background-color: #0d4e70 !important;
+        }
+        #slider:not([aria-valuenow="0"]) #thumb,
+        #slider:not([aria-valuenow="0"]) #indicator {
+          background-color: #ffc107 !important;
         }
   card-mod-view-yaml: |
     "ha-data-table $": |
@@ -119,8 +202,8 @@ skynet_dark_v2:
       .mdc-data-table__cell.group-header,
       .group-header {
         color: #ffc107 !important;
-        font-size: 18px !important;
-        font-weight: 800 !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
       }
     "hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
@@ -130,8 +213,27 @@ skynet_dark_v2:
       .mdc-data-table__cell.group-header,
       .group-header {
         color: #ffc107 !important;
-        font-size: 18px !important;
-        font-weight: 800 !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+      }
+    "ha-slider $": |
+      :host {
+        --ha-slider-track-color: #0d4e70;
+        --ha-slider-thumb-color: #2e3a4f;
+        --ha-slider-indicator-color: #0d4e70;
+      }
+      #track {
+        background-color: #0d4e70 !important;
+      }
+      #slider[aria-valuenow="0"] #thumb {
+        background-color: #2e3a4f !important;
+      }
+      #slider[aria-valuenow="0"] #indicator {
+        background-color: #0d4e70 !important;
+      }
+      #slider:not([aria-valuenow="0"]) #thumb,
+      #slider:not([aria-valuenow="0"]) #indicator {
+        background-color: #ffc107 !important;
       }
     "* $":
       "ha-data-table $": |
@@ -142,8 +244,27 @@ skynet_dark_v2:
         .mdc-data-table__cell.group-header,
         .group-header {
           color: #ffc107 !important;
-          font-size: 18px !important;
-          font-weight: 800 !important;
+          font-size: 14px !important;
+          font-weight: 400 !important;
+        }
+      "ha-slider $": |
+        :host {
+          --ha-slider-track-color: #0d4e70;
+          --ha-slider-thumb-color: #2e3a4f;
+          --ha-slider-indicator-color: #0d4e70;
+        }
+        #track {
+          background-color: #0d4e70 !important;
+        }
+        #slider[aria-valuenow="0"] #thumb {
+          background-color: #2e3a4f !important;
+        }
+        #slider[aria-valuenow="0"] #indicator {
+          background-color: #0d4e70 !important;
+        }
+        #slider:not([aria-valuenow="0"]) #thumb,
+        #slider:not([aria-valuenow="0"]) #indicator {
+          background-color: #ffc107 !important;
         }
 
   # make fan icons rotate based on their speed
@@ -185,11 +306,18 @@ skynet_dark_v2:
     header h2 {
       color: #02a9f4 !important;
     }
+    ha-slider[value="0"]::part(track),
+    ha-slider[value="0"]::part(indicator) {
+      background-color: #0d4e70 !important;
+    }
+    ha-slider[value="0"]::part(thumb) {
+      background-color: #2e3a4f !important;
+    }
     .mdc-data-table__cell.group-header,
     .group-header {
       color: #ffc107 !important;
-      font-size: 18px !important;
-      font-weight: 800 !important;
+      font-size: 14px !important;
+      font-weight: 400 !important;
     }
   card-mod-card-yaml: |
     "ha-data-table $": |
@@ -200,8 +328,8 @@ skynet_dark_v2:
       .mdc-data-table__cell.group-header,
       .group-header {
         color: #ffc107 !important;
-        font-size: 18px !important;
-        font-weight: 800 !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
       }
     "hui-card-features $ hui-light-brightness-card-feature $ ha-control-slider": |
       {% if config is defined and config.entity is defined %}
@@ -225,6 +353,25 @@ skynet_dark_v2:
           opacity: {{ '0.2' if slider_active else '0.45' }} !important;
         }
       {% endif %}
+    "ha-slider $": |
+      :host {
+        --ha-slider-track-color: #0d4e70;
+        --ha-slider-thumb-color: #2e3a4f;
+        --ha-slider-indicator-color: #0d4e70;
+      }
+      #track {
+        background-color: #0d4e70 !important;
+      }
+      #slider[aria-valuenow="0"] #thumb {
+        background-color: #2e3a4f !important;
+      }
+      #slider[aria-valuenow="0"] #indicator {
+        background-color: #0d4e70 !important;
+      }
+      #slider:not([aria-valuenow="0"]) #thumb,
+      #slider:not([aria-valuenow="0"]) #indicator {
+        background-color: #ffc107 !important;
+      }
     "* $":
       "ha-data-table $": |
         .mdc-data-table__header-row {
@@ -234,10 +381,48 @@ skynet_dark_v2:
         .mdc-data-table__cell.group-header,
         .group-header {
           color: #ffc107 !important;
-          font-size: 18px !important;
-          font-weight: 800 !important;
+          font-size: 14px !important;
+          font-weight: 400 !important;
+        }
+      "ha-slider $": |
+        :host {
+          --ha-slider-track-color: #0d4e70;
+          --ha-slider-thumb-color: #2e3a4f;
+          --ha-slider-indicator-color: #0d4e70;
+        }
+        #track {
+          background-color: #0d4e70 !important;
+        }
+        #slider[aria-valuenow="0"] #thumb {
+          background-color: #2e3a4f !important;
+        }
+        #slider[aria-valuenow="0"] #indicator {
+          background-color: #0d4e70 !important;
+        }
+        #slider:not([aria-valuenow="0"]) #thumb,
+        #slider:not([aria-valuenow="0"]) #indicator {
+          background-color: #ffc107 !important;
         }
   card-mod-more-info-yaml: |
+    "ha-slider $": |
+      :host {
+        --ha-slider-track-color: #0d4e70;
+        --ha-slider-thumb-color: #2e3a4f;
+        --ha-slider-indicator-color: #0d4e70;
+      }
+      #track {
+        background-color: #0d4e70 !important;
+      }
+      #slider[aria-valuenow="0"] #thumb {
+        background-color: #2e3a4f !important;
+      }
+      #slider[aria-valuenow="0"] #indicator {
+        background-color: #0d4e70 !important;
+      }
+      #slider:not([aria-valuenow="0"]) #thumb,
+      #slider:not([aria-valuenow="0"]) #indicator {
+        background-color: #ffc107 !important;
+      }
     "ha-more-info-info $ more-info-content $ more-info-light $ ha-state-control-light-brightness $ ha-control-slider": |
       {% set entity = config.entity if config is defined and config.entity is defined else none %}
       {% if entity %}
@@ -579,6 +764,9 @@ skynet_dark_v2:
   control-slider-color: "#0d4e70"
   control-slider-background: "#0d4e70"
   control-slider-background-opacity: 0.45
+  ha-slider-track-color: "#0d4e70"
+  ha-slider-thumb-color: "#2e3a4f"
+  ha-slider-indicator-color: "#0d4e70"
   paper-slider-knob-color: "#2e3a4f"
   paper-slider-knob-start-color: var(--switch-unchecked-button-color)
   paper-slider-pin-color: var(--paper-slider-knob-color)
