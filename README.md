@@ -2,6 +2,10 @@
 
 A dark Home Assistant theme using the Skynet palette with updated support for current Home Assistant UI tokens, including modern toggles, input fields, chips, pills, entity lists, tables, and semantic color variables.
 
+## Preview
+
+![Skynet Dark Theme preview](images/skynet-dark-theme.png)
+
 ## HACS installation
 
 1. Open HACS in Home Assistant.
