@@ -12,13 +12,6 @@ skynet_dark_v2:
     header h2 {
       color: #02a9f4 !important;
     }
-    ha-slider[value="0"]::part(track),
-    ha-slider[value="0"]::part(indicator) {
-      background-color: #0d4e70 !important;
-    }
-    ha-slider[value="0"]::part(thumb) {
-      background-color: #2e3a4f !important;
-    }
     .mdc-data-table__cell.group-header,
     .group-header {
       color: #ffc107 !important;
@@ -59,25 +52,6 @@ skynet_dark_v2:
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-    "ha-slider $": |
-      :host {
-        --ha-slider-track-color: #0d4e70;
-        --ha-slider-thumb-color: #2e3a4f;
-        --ha-slider-indicator-color: #0d4e70;
-      }
-      #track {
-        background-color: #0d4e70 !important;
-      }
-      #slider[aria-valuenow="0"] #thumb {
-        background-color: #2e3a4f !important;
-      }
-      #slider[aria-valuenow="0"] #indicator {
-        background-color: #0d4e70 !important;
-      }
-      #slider:not([aria-valuenow="0"]) #thumb,
-      #slider:not([aria-valuenow="0"]) #indicator {
-        background-color: #ffc107 !important;
-      }
     "* $":
       "ha-data-table $": |
         .mdc-data-table__header-row {
@@ -89,25 +63,6 @@ skynet_dark_v2:
           color: #ffc107 !important;
           font-size: 14px !important;
           font-weight: 400 !important;
-        }
-      "ha-slider $": |
-        :host {
-          --ha-slider-track-color: #0d4e70;
-          --ha-slider-thumb-color: #2e3a4f;
-          --ha-slider-indicator-color: #0d4e70;
-        }
-        #track {
-          background-color: #0d4e70 !important;
-        }
-        #slider[aria-valuenow="0"] #thumb {
-          background-color: #2e3a4f !important;
-        }
-        #slider[aria-valuenow="0"] #indicator {
-          background-color: #0d4e70 !important;
-        }
-        #slider:not([aria-valuenow="0"]) #thumb,
-        #slider:not([aria-valuenow="0"]) #indicator {
-          background-color: #ffc107 !important;
         }
   card-mod-config-yaml: |
     "ha-data-table $": |
@@ -143,25 +98,6 @@ skynet_dark_v2:
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-    "ha-slider $": |
-      :host {
-        --ha-slider-track-color: #0d4e70;
-        --ha-slider-thumb-color: #2e3a4f;
-        --ha-slider-indicator-color: #0d4e70;
-      }
-      #track {
-        background-color: #0d4e70 !important;
-      }
-      #slider[aria-valuenow="0"] #thumb {
-        background-color: #2e3a4f !important;
-      }
-      #slider[aria-valuenow="0"] #indicator {
-        background-color: #0d4e70 !important;
-      }
-      #slider:not([aria-valuenow="0"]) #thumb,
-      #slider:not([aria-valuenow="0"]) #indicator {
-        background-color: #ffc107 !important;
-      }
     "* $":
       "ha-data-table $": |
         .mdc-data-table__header-row {
@@ -173,25 +109,6 @@ skynet_dark_v2:
           color: #ffc107 !important;
           font-size: 14px !important;
           font-weight: 400 !important;
-        }
-      "ha-slider $": |
-        :host {
-          --ha-slider-track-color: #0d4e70;
-          --ha-slider-thumb-color: #2e3a4f;
-          --ha-slider-indicator-color: #0d4e70;
-        }
-        #track {
-          background-color: #0d4e70 !important;
-        }
-        #slider[aria-valuenow="0"] #thumb {
-          background-color: #2e3a4f !important;
-        }
-        #slider[aria-valuenow="0"] #indicator {
-          background-color: #0d4e70 !important;
-        }
-        #slider:not([aria-valuenow="0"]) #thumb,
-        #slider:not([aria-valuenow="0"]) #indicator {
-          background-color: #ffc107 !important;
         }
   card-mod-view-yaml: |
     "ha-data-table $": |
@@ -216,25 +133,6 @@ skynet_dark_v2:
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-    "ha-slider $": |
-      :host {
-        --ha-slider-track-color: #0d4e70;
-        --ha-slider-thumb-color: #2e3a4f;
-        --ha-slider-indicator-color: #0d4e70;
-      }
-      #track {
-        background-color: #0d4e70 !important;
-      }
-      #slider[aria-valuenow="0"] #thumb {
-        background-color: #2e3a4f !important;
-      }
-      #slider[aria-valuenow="0"] #indicator {
-        background-color: #0d4e70 !important;
-      }
-      #slider:not([aria-valuenow="0"]) #thumb,
-      #slider:not([aria-valuenow="0"]) #indicator {
-        background-color: #ffc107 !important;
-      }
     "* $":
       "ha-data-table $": |
         .mdc-data-table__header-row {
@@ -246,25 +144,6 @@ skynet_dark_v2:
           color: #ffc107 !important;
           font-size: 14px !important;
           font-weight: 400 !important;
-        }
-      "ha-slider $": |
-        :host {
-          --ha-slider-track-color: #0d4e70;
-          --ha-slider-thumb-color: #2e3a4f;
-          --ha-slider-indicator-color: #0d4e70;
-        }
-        #track {
-          background-color: #0d4e70 !important;
-        }
-        #slider[aria-valuenow="0"] #thumb {
-          background-color: #2e3a4f !important;
-        }
-        #slider[aria-valuenow="0"] #indicator {
-          background-color: #0d4e70 !important;
-        }
-        #slider:not([aria-valuenow="0"]) #thumb,
-        #slider:not([aria-valuenow="0"]) #indicator {
-          background-color: #ffc107 !important;
         }
 
   # make fan icons rotate based on their speed
@@ -281,37 +160,9 @@ skynet_dark_v2:
     ha-icon[data-domain="fan"][data-state="on"] {
       animation: spin 4s infinite linear;
     }
-    ha-card {
-      {% if config is defined and config.entity is defined %}
-        {% set state = states(config.entity) %}
-        {% set level = states(config.entity)|float(0) %}
-        {% if state_attr(config.entity, 'brightness') is not none %}
-          {% set level = state_attr(config.entity, 'brightness')|float(0) %}
-        {% elif state_attr(config.entity, 'percentage') is not none %}
-          {% set level = state_attr(config.entity, 'percentage')|float(0) %}
-        {% elif state_attr(config.entity, 'current_position') is not none %}
-          {% set level = state_attr(config.entity, 'current_position')|float(0) %}
-        {% elif state_attr(config.entity, 'volume_level') is not none %}
-          {% set level = state_attr(config.entity, 'volume_level')|float(0) %}
-        {% endif %}
-        {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
-        --feature-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
-        --tile-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
-        --control-slider-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
-        --control-slider-background: {{ '#ffc107' if slider_active else '#0d4e70' }};
-        --control-slider-background-opacity: {{ '0.2' if slider_active else '0.45' }};
-      {% endif %}
-    }
     ha-card > header > div > h2,
     header h2 {
       color: #02a9f4 !important;
-    }
-    ha-slider[value="0"]::part(track),
-    ha-slider[value="0"]::part(indicator) {
-      background-color: #0d4e70 !important;
-    }
-    ha-slider[value="0"]::part(thumb) {
-      background-color: #2e3a4f !important;
     }
     .mdc-data-table__cell.group-header,
     .group-header {
@@ -331,47 +182,6 @@ skynet_dark_v2:
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-    "hui-card-features $ hui-light-brightness-card-feature $ ha-control-slider": |
-      {% if config is defined and config.entity is defined %}
-        {% set state = states(config.entity) %}
-        {% set level = state_attr(config.entity, 'brightness')|float(0) if state_attr(config.entity, 'brightness') is not none else 0 %}
-        {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
-        --control-slider-color: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
-        --control-slider-background: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
-        --control-slider-background-opacity: {{ '0.2' if slider_active else '0.45' }} !important;
-      {% endif %}
-    "hui-card-features $ hui-light-brightness-card-feature $ ha-control-slider $": |
-      {% if config is defined and config.entity is defined %}
-        {% set state = states(config.entity) %}
-        {% set level = state_attr(config.entity, 'brightness')|float(0) if state_attr(config.entity, 'brightness') is not none else 0 %}
-        {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
-        .slider .slider-track-bar {
-          background-color: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
-        }
-        .slider .slider-track-background {
-          background: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
-          opacity: {{ '0.2' if slider_active else '0.45' }} !important;
-        }
-      {% endif %}
-    "ha-slider $": |
-      :host {
-        --ha-slider-track-color: #0d4e70;
-        --ha-slider-thumb-color: #2e3a4f;
-        --ha-slider-indicator-color: #0d4e70;
-      }
-      #track {
-        background-color: #0d4e70 !important;
-      }
-      #slider[aria-valuenow="0"] #thumb {
-        background-color: #2e3a4f !important;
-      }
-      #slider[aria-valuenow="0"] #indicator {
-        background-color: #0d4e70 !important;
-      }
-      #slider:not([aria-valuenow="0"]) #thumb,
-      #slider:not([aria-valuenow="0"]) #indicator {
-        background-color: #ffc107 !important;
-      }
     "* $":
       "ha-data-table $": |
         .mdc-data-table__header-row {
@@ -384,104 +194,9 @@ skynet_dark_v2:
           font-size: 14px !important;
           font-weight: 400 !important;
         }
-      "ha-slider $": |
-        :host {
-          --ha-slider-track-color: #0d4e70;
-          --ha-slider-thumb-color: #2e3a4f;
-          --ha-slider-indicator-color: #0d4e70;
-        }
-        #track {
-          background-color: #0d4e70 !important;
-        }
-        #slider[aria-valuenow="0"] #thumb {
-          background-color: #2e3a4f !important;
-        }
-        #slider[aria-valuenow="0"] #indicator {
-          background-color: #0d4e70 !important;
-        }
-        #slider:not([aria-valuenow="0"]) #thumb,
-        #slider:not([aria-valuenow="0"]) #indicator {
-          background-color: #ffc107 !important;
-        }
-  card-mod-more-info-yaml: |
-    "ha-slider $": |
-      :host {
-        --ha-slider-track-color: #0d4e70;
-        --ha-slider-thumb-color: #2e3a4f;
-        --ha-slider-indicator-color: #0d4e70;
-      }
-      #track {
-        background-color: #0d4e70 !important;
-      }
-      #slider[aria-valuenow="0"] #thumb {
-        background-color: #2e3a4f !important;
-      }
-      #slider[aria-valuenow="0"] #indicator {
-        background-color: #0d4e70 !important;
-      }
-      #slider:not([aria-valuenow="0"]) #thumb,
-      #slider:not([aria-valuenow="0"]) #indicator {
-        background-color: #ffc107 !important;
-      }
-    "ha-more-info-info $ more-info-content $ more-info-light $ ha-state-control-light-brightness $ ha-control-slider": |
-      {% set entity = config.entity if config is defined and config.entity is defined else none %}
-      {% if entity %}
-        {% set state = states(entity) %}
-        {% set level = state_attr(entity, 'brightness')|float(0) if state_attr(entity, 'brightness') is not none else 0 %}
-        {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
-        --control-slider-color: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
-        --control-slider-background: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
-        --control-slider-background-opacity: {{ '0.2' if slider_active else '0.45' }} !important;
-      {% endif %}
-    "ha-more-info-info $ more-info-content $ more-info-light $ ha-state-control-light-brightness $ ha-control-slider $": |
-      {% set entity = config.entity if config is defined and config.entity is defined else none %}
-      {% if entity %}
-        {% set state = states(entity) %}
-        {% set level = state_attr(entity, 'brightness')|float(0) if state_attr(entity, 'brightness') is not none else 0 %}
-        {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
-        .slider .slider-track-bar {
-          background-color: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
-        }
-        .slider .slider-track-background {
-          background: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
-          opacity: {{ '0.2' if slider_active else '0.45' }} !important;
-        }
-      {% endif %}
 
   # animations
   card-mod-row-yaml: |
-    ".": |
-      :host {
-        {# Keep sliders dark at zero/off; switch to amber only for active non-zero device levels. #}
-        {% if config is defined and config.entity is defined %}
-          {% set state = states(config.entity) %}
-          {% set level = states(config.entity)|float(0) %}
-          {% if state_attr(config.entity, 'brightness') is not none %}
-            {% set level = state_attr(config.entity, 'brightness')|float(0) %}
-          {% elif state_attr(config.entity, 'percentage') is not none %}
-            {% set level = state_attr(config.entity, 'percentage')|float(0) %}
-          {% elif state_attr(config.entity, 'current_position') is not none %}
-            {% set level = state_attr(config.entity, 'current_position')|float(0) %}
-          {% elif state_attr(config.entity, 'volume_level') is not none %}
-            {% set level = state_attr(config.entity, 'volume_level')|float(0) %}
-          {% endif %}
-          {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
-          --md-slider-active-track-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
-          --md-slider-handle-color: {{ '#ffc107' if slider_active else '#2e3a4f' }};
-          --md-slider-hover-handle-color: {{ '#ffc107' if slider_active else '#344256' }};
-          --md-slider-focus-handle-color: {{ '#ffc107' if slider_active else '#344256' }};
-          --md-slider-pressed-handle-color: {{ '#ffc107' if slider_active else '#344256' }};
-          --md-slider-label-container-color: {{ '#ffc107' if slider_active else '#2e3a4f' }};
-          --paper-slider-knob-color: {{ '#ffc107' if slider_active else '#2e3a4f' }};
-          --paper-slider-pin-color: {{ '#ffc107' if slider_active else '#2e3a4f' }};
-          --paper-slider-active-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
-          --feature-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
-          --tile-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
-          --control-slider-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
-          --control-slider-background: {{ '#ffc107' if slider_active else '#0d4e70' }};
-          --control-slider-background-opacity: {{ '0.2' if slider_active else '0.45' }};
-        {% endif %}
-      }
     "*:first-child$": |
       @keyframes spin {
         0% {
@@ -761,27 +476,17 @@ skynet_dark_v2:
   state-icon-unavailable-color: var(--disabled-text-color)
 
   # Sliders
-  control-slider-color: "#0d4e70"
-  control-slider-background: "#0d4e70"
-  control-slider-background-opacity: 0.45
-  ha-slider-track-color: "#0d4e70"
-  ha-slider-thumb-color: "#2e3a4f"
-  ha-slider-indicator-color: "#0d4e70"
-  paper-slider-knob-color: "#2e3a4f"
+  paper-slider-knob-color: var(--switch-checked-button-color)
   paper-slider-knob-start-color: var(--switch-unchecked-button-color)
   paper-slider-pin-color: var(--paper-slider-knob-color)
-  paper-slider-active-color: "#0d4e70"
-  paper-slider-secondary-color: "#0d4e70"
+  paper-slider-active-color: "#0D668E"
+  paper-slider-secondary-color: var(--light-primary-color)
   paper-slider-container-color: var(--disabled-text-color)
   mini-media-player-overlay-color: var(--disabled-text-color)
 
-  md-slider-inactive-track-color: "#0d4e70"
-  md-slider-active-track-color: "#0d4e70"
+  md-slider-inactive-track-color: "#181e29"
+  md-slider-active-track-color: "#02a9f4"
   md-slider-handle-color: "#2e3a4f"
-  md-slider-hover-handle-color: "#344256"
-  md-slider-focus-handle-color: "#344256"
-  md-slider-pressed-handle-color: "#344256"
-  md-slider-label-container-color: "#2e3a4f"
 
   # Text Dividers from text-divier-row card
   text-divider-color: var(--divider-color)
