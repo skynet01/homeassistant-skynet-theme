@@ -8,6 +8,10 @@ skynet_dark_v2:
   #     color: #FFC10A;
   #   }
   card-mod-view: |
+    ha-card > header > div > h2,
+    header h2 {
+      color: #02a9f4 !important;
+    }
     .mdc-data-table__cell.group-header,
     .group-header {
       color: #ffc107 !important;
@@ -16,6 +20,28 @@ skynet_dark_v2:
     }
   card-mod-root-yaml: |
     "ha-data-table $": |
+      .mdc-data-table__header-row {
+        background-color: #161A23 !important;
+      }
+      .mdc-data-table__header-cell,
+      .mdc-data-table__cell.group-header,
+      .group-header {
+        color: #ffc107 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+      }
+    "hass-tabs-subpage-data-table $ ha-data-table $": |
+      .mdc-data-table__header-row {
+        background-color: #161A23 !important;
+      }
+      .mdc-data-table__header-cell,
+      .mdc-data-table__cell.group-header,
+      .group-header {
+        color: #ffc107 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+      }
+    "ha-config-entities $ hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
         background-color: #161A23 !important;
       }
@@ -50,6 +76,28 @@ skynet_dark_v2:
         font-size: 18px !important;
         font-weight: 800 !important;
       }
+    "hass-tabs-subpage-data-table $ ha-data-table $": |
+      .mdc-data-table__header-row {
+        background-color: #161A23 !important;
+      }
+      .mdc-data-table__header-cell,
+      .mdc-data-table__cell.group-header,
+      .group-header {
+        color: #ffc107 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+      }
+    "ha-config-entities $ hass-tabs-subpage-data-table $ ha-data-table $": |
+      .mdc-data-table__header-row {
+        background-color: #161A23 !important;
+      }
+      .mdc-data-table__header-cell,
+      .mdc-data-table__cell.group-header,
+      .group-header {
+        color: #ffc107 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+      }
     "* $":
       "ha-data-table $": |
         .mdc-data-table__header-row {
@@ -64,6 +112,17 @@ skynet_dark_v2:
         }
   card-mod-view-yaml: |
     "ha-data-table $": |
+      .mdc-data-table__header-row {
+        background-color: #161A23 !important;
+      }
+      .mdc-data-table__header-cell,
+      .mdc-data-table__cell.group-header,
+      .group-header {
+        color: #ffc107 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+      }
+    "hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
         background-color: #161A23 !important;
       }
@@ -101,6 +160,31 @@ skynet_dark_v2:
     ha-icon[data-domain="fan"][data-state="on"] {
       animation: spin 4s infinite linear;
     }
+    ha-card {
+      {% if config is defined and config.entity is defined %}
+        {% set state = states(config.entity) %}
+        {% set level = states(config.entity)|float(0) %}
+        {% if state_attr(config.entity, 'brightness') is not none %}
+          {% set level = state_attr(config.entity, 'brightness')|float(0) %}
+        {% elif state_attr(config.entity, 'percentage') is not none %}
+          {% set level = state_attr(config.entity, 'percentage')|float(0) %}
+        {% elif state_attr(config.entity, 'current_position') is not none %}
+          {% set level = state_attr(config.entity, 'current_position')|float(0) %}
+        {% elif state_attr(config.entity, 'volume_level') is not none %}
+          {% set level = state_attr(config.entity, 'volume_level')|float(0) %}
+        {% endif %}
+        {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
+        --feature-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
+        --tile-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
+        --control-slider-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
+        --control-slider-background: {{ '#ffc107' if slider_active else '#0d4e70' }};
+        --control-slider-background-opacity: {{ '0.2' if slider_active else '0.45' }};
+      {% endif %}
+    }
+    ha-card > header > div > h2,
+    header h2 {
+      color: #02a9f4 !important;
+    }
     .mdc-data-table__cell.group-header,
     .group-header {
       color: #ffc107 !important;
@@ -119,6 +203,28 @@ skynet_dark_v2:
         font-size: 18px !important;
         font-weight: 800 !important;
       }
+    "hui-card-features $ hui-light-brightness-card-feature $ ha-control-slider": |
+      {% if config is defined and config.entity is defined %}
+        {% set state = states(config.entity) %}
+        {% set level = state_attr(config.entity, 'brightness')|float(0) if state_attr(config.entity, 'brightness') is not none else 0 %}
+        {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
+        --control-slider-color: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
+        --control-slider-background: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
+        --control-slider-background-opacity: {{ '0.2' if slider_active else '0.45' }} !important;
+      {% endif %}
+    "hui-card-features $ hui-light-brightness-card-feature $ ha-control-slider $": |
+      {% if config is defined and config.entity is defined %}
+        {% set state = states(config.entity) %}
+        {% set level = state_attr(config.entity, 'brightness')|float(0) if state_attr(config.entity, 'brightness') is not none else 0 %}
+        {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
+        .slider .slider-track-bar {
+          background-color: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
+        }
+        .slider .slider-track-background {
+          background: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
+          opacity: {{ '0.2' if slider_active else '0.45' }} !important;
+        }
+      {% endif %}
     "* $":
       "ha-data-table $": |
         .mdc-data-table__header-row {
@@ -131,6 +237,31 @@ skynet_dark_v2:
           font-size: 18px !important;
           font-weight: 800 !important;
         }
+  card-mod-more-info-yaml: |
+    "ha-more-info-info $ more-info-content $ more-info-light $ ha-state-control-light-brightness $ ha-control-slider": |
+      {% set entity = config.entity if config is defined and config.entity is defined else none %}
+      {% if entity %}
+        {% set state = states(entity) %}
+        {% set level = state_attr(entity, 'brightness')|float(0) if state_attr(entity, 'brightness') is not none else 0 %}
+        {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
+        --control-slider-color: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
+        --control-slider-background: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
+        --control-slider-background-opacity: {{ '0.2' if slider_active else '0.45' }} !important;
+      {% endif %}
+    "ha-more-info-info $ more-info-content $ more-info-light $ ha-state-control-light-brightness $ ha-control-slider $": |
+      {% set entity = config.entity if config is defined and config.entity is defined else none %}
+      {% if entity %}
+        {% set state = states(entity) %}
+        {% set level = state_attr(entity, 'brightness')|float(0) if state_attr(entity, 'brightness') is not none else 0 %}
+        {% set slider_active = state not in ['off', 'unavailable', 'unknown', 'none', ''] and level > 0 %}
+        .slider .slider-track-bar {
+          background-color: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
+        }
+        .slider .slider-track-background {
+          background: {{ '#ffc107' if slider_active else '#0d4e70' }} !important;
+          opacity: {{ '0.2' if slider_active else '0.45' }} !important;
+        }
+      {% endif %}
 
   # animations
   card-mod-row-yaml: |
@@ -159,6 +290,11 @@ skynet_dark_v2:
           --paper-slider-knob-color: {{ '#ffc107' if slider_active else '#2e3a4f' }};
           --paper-slider-pin-color: {{ '#ffc107' if slider_active else '#2e3a4f' }};
           --paper-slider-active-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
+          --feature-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
+          --tile-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
+          --control-slider-color: {{ '#ffc107' if slider_active else '#0d4e70' }};
+          --control-slider-background: {{ '#ffc107' if slider_active else '#0d4e70' }};
+          --control-slider-background-opacity: {{ '0.2' if slider_active else '0.45' }};
         {% endif %}
       }
     "*:first-child$": |
@@ -440,6 +576,9 @@ skynet_dark_v2:
   state-icon-unavailable-color: var(--disabled-text-color)
 
   # Sliders
+  control-slider-color: "#0d4e70"
+  control-slider-background: "#0d4e70"
+  control-slider-background-opacity: 0.45
   paper-slider-knob-color: "#2e3a4f"
   paper-slider-knob-start-color: var(--switch-unchecked-button-color)
   paper-slider-pin-color: var(--paper-slider-knob-color)
@@ -476,7 +615,7 @@ skynet_dark_v2:
   ha-card-header-font-size: 20px
   # ha-card-header-letter-spacing: "1.49px"
   ha-card-box-shadow: 1px 1px 10px 0px rgba(14, 14, 22, 0.32)
-  ha-card-header-color: "#ffc107"
+  ha-card-header-color: "#02a9f4"
   ha-card-background: "#202937"
   card-background-color: "#1b2336"
   paper-listbox-background-color: "#202937"
