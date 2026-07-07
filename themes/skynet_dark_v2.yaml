@@ -52,7 +52,7 @@ skynet_dark_v2:
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-    "ha-config-automation $ ha-automation-picker $ hass-tabs-subpage-data-table $ ha-data-table $": |
+    "ha-automation-picker $ hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
         background-color: #161A23 !important;
       }
@@ -63,7 +63,7 @@ skynet_dark_v2:
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-    "ha-config-script $ ha-script-picker $ hass-tabs-subpage-data-table $ ha-data-table $": |
+    "ha-script-picker $ hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
         background-color: #161A23 !important;
       }
@@ -74,7 +74,7 @@ skynet_dark_v2:
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-    "ha-config-scene $ ha-scene-dashboard $ hass-tabs-subpage-data-table $ ha-data-table $": |
+    "ha-scene-dashboard $ hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
         background-color: #161A23 !important;
       }
@@ -153,7 +153,7 @@ skynet_dark_v2:
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-    "ha-config-automation $ ha-automation-picker $ hass-tabs-subpage-data-table $ ha-data-table $": |
+    "ha-automation-picker $ hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
         background-color: #161A23 !important;
       }
@@ -164,7 +164,7 @@ skynet_dark_v2:
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-    "ha-config-script $ ha-script-picker $ hass-tabs-subpage-data-table $ ha-data-table $": |
+    "ha-script-picker $ hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
         background-color: #161A23 !important;
       }
@@ -175,7 +175,7 @@ skynet_dark_v2:
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-    "ha-config-scene $ ha-scene-dashboard $ hass-tabs-subpage-data-table $ ha-data-table $": |
+    "ha-scene-dashboard $ hass-tabs-subpage-data-table $ ha-data-table $": |
       .mdc-data-table__header-row {
         background-color: #161A23 !important;
       }
@@ -311,6 +311,15 @@ skynet_dark_v2:
       div.wrapper ha-slider {
         margin-right: 14px;
       }
+      {% if config is defined and config.entity is defined and (is_state(config.entity, 'off') or is_state(config.entity, 'closed')) %}
+      ha-slider {
+        --md-slider-handle-color: #2e3a4f !important;
+        --md-slider-focused-handle-color: #2e3a4f !important;
+        --md-slider-hover-handle-color: #2e3a4f !important;
+        --md-slider-active-track-color: #0d4e70 !important;
+        --md-slider-inactive-track-color: #0d4e70 !important;
+      }
+      {% endif %}
     "*:first-child$": |
       @keyframes spin {
         0% {
